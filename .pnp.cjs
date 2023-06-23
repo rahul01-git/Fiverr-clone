@@ -35,6 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:7.32.2"],\
             ["eslint-plugin-react-hooks", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:4.6.0"],\
             ["eslint-plugin-react-refresh", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:0.3.5"],\
+            ["infinite-react-carousel", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:1.2.11"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:18.2.0"],\
             ["react-router-dom", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:6.13.0"],\
@@ -1104,6 +1105,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["babel-polyfill", [\
+        ["npm:6.26.0", {\
+          "packageLocation": "./.yarn/cache/babel-polyfill-npm-6.26.0-4fd88717c9-6fb1a3c0bf.zip/node_modules/babel-polyfill/",\
+          "packageDependencies": [\
+            ["babel-polyfill", "npm:6.26.0"],\
+            ["babel-runtime", "npm:6.26.0"],\
+            ["core-js", "npm:2.6.12"],\
+            ["regenerator-runtime", "npm:0.10.5"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["babel-runtime", [\
+        ["npm:6.26.0", {\
+          "packageLocation": "./.yarn/cache/babel-runtime-npm-6.26.0-d38e7946b4-8aeade9466.zip/node_modules/babel-runtime/",\
+          "packageDependencies": [\
+            ["babel-runtime", "npm:6.26.0"],\
+            ["core-js", "npm:2.6.12"],\
+            ["regenerator-runtime", "npm:0.11.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["balanced-match", [\
         ["npm:1.0.2", {\
           "packageLocation": "./.yarn/cache/balanced-match-npm-1.0.2-a53c126459-9706c088a2.zip/node_modules/balanced-match/",\
@@ -1261,6 +1285,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["classnames", [\
+        ["npm:2.3.2", {\
+          "packageLocation": "./.yarn/cache/classnames-npm-2.3.2-d2fdae468d-2c62199789.zip/node_modules/classnames/",\
+          "packageDependencies": [\
+            ["classnames", "npm:2.3.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["clean-stack", [\
         ["npm:2.2.0", {\
           "packageLocation": "./.yarn/cache/clean-stack-npm-2.2.0-a8ce435a5c-2ac8cd2b2f.zip/node_modules/clean-stack/",\
@@ -1336,6 +1369,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/convert-source-map-npm-1.9.0-e294555f4b-dc55a1f28d.zip/node_modules/convert-source-map/",\
           "packageDependencies": [\
             ["convert-source-map", "npm:1.9.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["core-js", [\
+        ["npm:2.6.12", {\
+          "packageLocation": "./.yarn/unplugged/core-js-npm-2.6.12-0b93d77d31/node_modules/core-js/",\
+          "packageDependencies": [\
+            ["core-js", "npm:2.6.12"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1923,6 +1965,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:7.32.2"],\
             ["eslint-plugin-react-hooks", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:4.6.0"],\
             ["eslint-plugin-react-refresh", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:0.3.5"],\
+            ["infinite-react-carousel", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:1.2.11"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:18.2.0"],\
             ["react-router-dom", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:6.13.0"],\
@@ -2372,6 +2415,37 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["infinite-react-carousel", [\
+        ["npm:1.2.11", {\
+          "packageLocation": "./.yarn/cache/infinite-react-carousel-npm-1.2.11-14eac2a6b8-c96eeaefa0.zip/node_modules/infinite-react-carousel/",\
+          "packageDependencies": [\
+            ["infinite-react-carousel", "npm:1.2.11"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:1.2.11", {\
+          "packageLocation": "./.yarn/__virtual__/infinite-react-carousel-virtual-4570c0d525/0/cache/infinite-react-carousel-npm-1.2.11-14eac2a6b8-c96eeaefa0.zip/node_modules/infinite-react-carousel/",\
+          "packageDependencies": [\
+            ["infinite-react-carousel", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:1.2.11"],\
+            ["@types/react", "npm:18.2.13"],\
+            ["@types/react-dom", "npm:18.2.6"],\
+            ["babel-polyfill", "npm:6.26.0"],\
+            ["classnames", "npm:2.3.2"],\
+            ["lodash", "npm:4.17.21"],\
+            ["prop-types", "npm:15.8.1"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:18.2.0"],\
+            ["resize-observer-polyfill", "npm:1.5.1"]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react",\
+            "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["inflight", [\
         ["npm:1.0.6", {\
           "packageLocation": "./.yarn/cache/inflight-npm-1.0.6-ccedb4b908-f4f76aa072.zip/node_modules/inflight/",\
@@ -2727,6 +2801,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["locate-path", "npm:6.0.0"],\
             ["p-locate", "npm:5.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lodash", [\
+        ["npm:4.17.21", {\
+          "packageLocation": "./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/",\
+          "packageDependencies": [\
+            ["lodash", "npm:4.17.21"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3429,6 +3512,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["regenerator-runtime", [\
+        ["npm:0.10.5", {\
+          "packageLocation": "./.yarn/cache/regenerator-runtime-npm-0.10.5-83f627af0c-35b33dbe53.zip/node_modules/regenerator-runtime/",\
+          "packageDependencies": [\
+            ["regenerator-runtime", "npm:0.10.5"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:0.11.1", {\
+          "packageLocation": "./.yarn/cache/regenerator-runtime-npm-0.11.1-a31e4f8dcd-3c97bd2c7b.zip/node_modules/regenerator-runtime/",\
+          "packageDependencies": [\
+            ["regenerator-runtime", "npm:0.11.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["regexp.prototype.flags", [\
         ["npm:1.5.0", {\
           "packageLocation": "./.yarn/cache/regexp.prototype.flags-npm-1.5.0-5623b9e07f-c541687cdb.zip/node_modules/regexp.prototype.flags/",\
@@ -3437,6 +3536,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["call-bind", "npm:1.0.2"],\
             ["define-properties", "npm:1.2.0"],\
             ["functions-have-names", "npm:1.2.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["resize-observer-polyfill", [\
+        ["npm:1.5.1", {\
+          "packageLocation": "./.yarn/cache/resize-observer-polyfill-npm-1.5.1-603120e8a0-57e7f79489.zip/node_modules/resize-observer-polyfill/",\
+          "packageDependencies": [\
+            ["resize-observer-polyfill", "npm:1.5.1"]\
           ],\
           "linkType": "HARD"\
         }]\
