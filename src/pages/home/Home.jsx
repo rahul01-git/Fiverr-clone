@@ -53,6 +53,35 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className="features dark">
+        <div className="container">
+          <div className="item">
+            <h1><b>fiverr</b> business. <span>NEW</span></h1>
+            <h1>A solution built for <i>business</i></h1>
+            <p>Upgrade to a curated experience to access vetted talent and exclusive tools</p>
+            <div className="title">
+              <img src="./img/check.png" alt="" />
+              Talent matching
+            </div>
+            <div className="title">
+              <img src="./img/check.png" alt="" />
+            Dedicated account management
+            </div>
+            <div className="title">
+              <img src="./img/check.png" alt="" />
+              Team collaboration tools
+            </div>
+            <div className="title">
+              <img src="./img/check.png" alt="" />
+              Business Payment solutions
+            </div>
+            <button>Explore Fiverr Business</button>
+          </div>
+          <div className="item">
+            <img src="./img/fb.webp" alt="" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
