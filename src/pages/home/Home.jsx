@@ -3,14 +3,15 @@ import Slide from "../../components/slide/Slide";
 import Trusted from "../../components/trusted/Trusted";
 import "./Home.scss";
 import CatCard from "../../components/catCard/CatCard";
-import { cards } from "../../data";
+import { cards, projects } from "../../data";
+import ProjectCard from "../../components/projectCard/ProjectCard";
 
 const Home = () => {
   return (
     <div className="home">
       <Featured />
       <Trusted />
-      <Slide slidesToShow={5} arrowsScroll={5}>
+      <Slide slidesToShow={4} arrowsScroll={4}>
         {cards?.map((card) => (
           <CatCard item={card} key={card.id} />
         ))}
@@ -82,6 +83,11 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Slide slidesToShow={4} arrowsScroll={4}>
+        {projects?.map((card) => (
+          <ProjectCard item={card} key={card.id} />
+        ))}
+      </Slide>
     </div>
   );
 };
