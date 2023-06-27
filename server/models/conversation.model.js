@@ -28,7 +28,7 @@ const ConversationSchema = new Schema({
         required: false,
     }
 }, {
-    timeStamps: true
+    timestamps: true
 })
 
 export default mongoose.model("Conversation", ConversationSchema)

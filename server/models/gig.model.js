@@ -63,7 +63,7 @@ const GigSchema = new Schema({
     default: 0,
    },
 },{
-    timeStamps: true
+    timestamps: true
 })
 
 export default mongoose.model("Gig",GigSchema)
