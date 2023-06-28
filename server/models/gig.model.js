@@ -47,7 +47,7 @@ const GigSchema = new Schema({
     required: true,
    },
    deliveryTime: {
-    type: number,
+    type: Number,
     required: true,
    },
    revisionTime: {
@@ -66,4 +66,4 @@ const GigSchema = new Schema({
     timestamps: true
 })
 
-export default mongoose.model("Gig",GigSchema)
+module.exports =  mongoose.model("Gig",GigSchema)
