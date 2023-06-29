@@ -13,26 +13,35 @@ import Orders from "./pages/orders/Orders";
 import Add from "./pages/add/Add";
 import PageNotFound from "./pages/pageNotFound/PageNotFound";
 import "./App.scss";
+import {
+  QueryClient,
+  QueryClientProvider,
+  useQuery,
+} from "@tanstack/react-query";
 
 const App = () => {
+  const queryClient = new QueryClient();
+
   return (
     <Router>
       <div className="app">
-        <Navbar />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/gigs" element={<Gigs />} />
-          <Route path="/gig/:id" element={<Gig />} />
-          <Route path="/orders" element={<Orders />} />
-          <Route path="/mygigs" element={<MyGigs />} />
-          <Route path="/add" element={<Add />} />
-          <Route path="/messages" element={<Messages />} />
-          <Route path="/message/:id" element={<Message />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-        <Footer />
+        <QueryClientProvider client={queryClient}>
+          <Navbar />
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/gigs" element={<Gigs />} />
+            <Route path="/gig/:id" element={<Gig />} />
+            <Route path="/orders" element={<Orders />} />
+            <Route path="/mygigs" element={<MyGigs />} />
+            <Route path="/add" element={<Add />} />
+            <Route path="/messages" element={<Messages />} />
+            <Route path="/message/:id" element={<Message />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+          <Footer />
+        </QueryClientProvider>
       </div>
     </Router>
   );

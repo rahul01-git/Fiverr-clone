@@ -19,16 +19,29 @@ exports.createGig = async (req, res, next) => {
 exports.getGig = async (req, res, next) => {
     try {
         const gig = await Gig.findById(req.params.id)
-        if(!gig) return next(createError(404,"Gig not found"))
+        if (!gig) return next(createError(404, "Gig not found"))
         res.status(200).send(gig)
     } catch (error) {
         next(error)
     }
 }
 exports.getGigs = async (req, res, next) => {
+    const q = req.query
+    const filters = {
+        ...(q.userId && { userId: q.userId }),
+        ...(q.cat && { cat: q.cat }),
+        ...(q.search && { title: { $regex: q.search, $options: "i" } }),
+        ...((q.min || q.max) && {
+            price: {
+                ...(q.min && { $gt: q.min }),
+                ...(q.max && { $lt: q.max })
+            }
+        })
+
+    }
     try {
-    const gigs = await Gig.find()
-    res.status(200).send(gigs)
+        const gigs = await Gig.find(filters)
+        res.status(200).send(gigs)
     } catch (error) {
         next(error)
     }
@@ -36,7 +49,7 @@ exports.getGigs = async (req, res, next) => {
 exports.deleteGig = async (req, res, next) => {
     try {
         const gig = await Gig.findById(req.params.id)
-        if(!gig) return next(createError(404,"Gig not found"))
+        if (!gig) return next(createError(404, "Gig not found"))
         if (gig.userId !== req.userId) return next(createError(403, "You can delete your gigs only"))
         await Gig.findByIdAndDelete(req.params.id)
         res.status(200).send("Gig has been deleted")
