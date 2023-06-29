@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import "./Navbar.scss";
 import { Link, useLocation } from "react-router-dom";
 import newRequest from "../../utils/newRequest";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const [active, setActive] = useState(false);
   const [open, setOpen] = useState(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { pathname } = useLocation();
 
   const isActive = () => {
@@ -22,15 +22,15 @@ const Navbar = () => {
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
-  const handleLogout = async ( ) =>{
+  const handleLogout = async () => {
     try {
-      await newRequest.post('/auth/logout')
-      localStorage.removeItem('currentUser')
-      navigate('/')
+      await newRequest.post("/auth/logout");
+      localStorage.removeItem("currentUser");
+      navigate("/");
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
   return (
     <div className={active || pathname !== "/" ? "active navbar" : "navbar"}>
@@ -45,15 +45,16 @@ const Navbar = () => {
           <span>Fiverr Business</span>
           <span>Explore</span>
           <span>English</span>
-          {!currentUser && <span>Sign in</span>}
+          {!currentUser && <Link to="/login" className="link">Sign in</Link>}
           {!currentUser?.isSeller && <span>Become a Seller</span>}
-          {!currentUser && <button>Join</button>}
+          {!currentUser && (
+            <Link to="/register" className="link">
+              <button>Join</button>
+            </Link>
+          )}
           {currentUser && (
             <div className="user" onClick={() => setOpen(!open)}>
-              <img
-                src={currentUser?.img || '/img/heart.png'}
-                alt=""
-              />
+              <img src={currentUser?.img || "/img/heart.png"} alt="" />
               <span>{currentUser?.username}</span>
               {open && (
                 <div className="options">

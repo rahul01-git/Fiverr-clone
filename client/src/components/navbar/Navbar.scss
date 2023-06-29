@@ -12,6 +12,15 @@
   &.active{
     background-color: white;
     color: black;
+
+    button{
+      border: 1px solid #1dbf73 !important; 
+      color: #1dbf73 !important;
+      &:hover {
+        background-color: #1dbf73;
+        color: white !important;
+      }
+    }
   }
   .container {
     width: 1400px;
