@@ -13,7 +13,7 @@ const ReviewSchema = new Schema({
     star: {
         type: Number,
         require: true,
-        enum: [1,2,3,4,5]
+        enum: [1, 2, 3, 4, 5]
     },
     desc: {
         type: String,
@@ -23,4 +23,4 @@ const ReviewSchema = new Schema({
     timestamps: true
 })
 
-export default mongoose.model("Review", ReviewSchema)
+module.exports = mongoose.model("Review", ReviewSchema)

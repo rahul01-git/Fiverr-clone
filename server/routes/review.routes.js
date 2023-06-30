@@ -1,6 +1,11 @@
 const express = require('express')
 const router = express.Router()
+const {verifyToken} = require('../middleware/jwt')
+const {createReview, getReviews,deleteReview} = require('../controllers/review.controller')
 
-router.get('/test',)
+
+router.post('/',verifyToken,createReview)
+router.get('/:id',getReviews)
+router.delete('/:id',deleteReview)
 
 module.exports = router
