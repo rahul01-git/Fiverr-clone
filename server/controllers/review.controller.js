@@ -1,9 +1,15 @@
 const {createError} = require('../utils/createError')
 const Review = require('../models/review.model')
 const Gig = require('../models/gig.model')
+const Order = require('../models/order.model')
+
 exports.createReview = async (req, res, next) => {
     if (req.isSeller) return next(createError(403, "Seller cannot create a review"))
-
+    const orders = await Order.findOne({
+        ...(req.isSeller ? { sellerId: req.userId } : { buyerId: req.userId }),
+        isCompleted: true
+    })
+    if(!orders) return next(createError(403, "You cannot post review without completing an order"))
     const newReview = new Review({
         userId: req.userId,
         gigId: req.body.gigId,

@@ -14,8 +14,7 @@ function Gig() {
       }),
   });
 
-
-  const userId = data?.userId
+  const userId = data?.userId;
   const {
     isLoading: isLoadingUser,
     error: errorUser,
@@ -25,7 +24,7 @@ function Gig() {
     queryFn: () => {
       return newRequest.get(`/users/${userId}`).then((res) => res.data);
     },
-    enabled:!!userId
+    enabled: !!userId,
   });
 
   return (
@@ -53,16 +52,13 @@ function Gig() {
                   alt=""
                 />
                 <span>{dataUser.username}</span>
-                {!isNaN(data.totalStars / data.starNumber) && (
-                  <div className="stars">
-                    {Array(Math.round(data.totalStars / data.starNumber))
-                      .fill()
-                      .map((item, i) => (
-                        <img src="/img/star.png" alt="" key={i} />
-                      ))}
-                    <span>{Math.round(data.totalStars / data.starNumber)}</span>
-                  </div>
-                )}
+                <div className="stars">
+                  <img src="/img/star.png" alt="" />
+                  <span>
+                    {!isNaN(data.totalStars / data.starNumber) &&
+                      Math.round(data.totalStars / data.starNumber) || 0}
+                  </span>
+                </div>
               </div>
             )}
             <Slider slidesToShow={1} arrowsScroll={1} className="slider">
@@ -84,15 +80,11 @@ function Gig() {
                   <div className="info">
                     <span>{dataUser.username}</span>
                     <div className="stars">
-                      {Array(Math.round(data.totalStars / data.starNumber))
-                        .fill()
-                        .map((item, i) => (
-                          <img src="/img/star.png" alt="" key={i} />
-                        ))}
-
-                      <span>
-                        {Math.round(data.totalStars / data.starNumber)}
-                      </span>
+                    <img src="/img/star.png" alt="" />
+                  <span>
+                    {!isNaN(data.totalStars / data.starNumber) &&
+                      Math.round(data.totalStars / data.starNumber) || 0}
+                  </span>
                     </div>
                     <button>Contact Me</button>
                   </div>
