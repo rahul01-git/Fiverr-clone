@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import "./Gig.scss";
 import { Slider } from "infinite-react-carousel/lib";
 import { useParams } from "react-router-dom";
@@ -15,29 +14,21 @@ function Gig() {
       }),
   });
 
-  // Fetch user data conditionally
+
+  const userId = data?.userId
   const {
     isLoading: isLoadingUser,
     error: errorUser,
     data: dataUser,
-    refetch:refetchUser
+    refetch: refetchUser,
   } = useQuery({
     queryKey: ["user"],
     queryFn: () => {
-      if (data) {
-        return newRequest.get(`/users/${data.userId}`).then((res) => res.data);
-      }
-      return Promise.resolve(null); // Return a resolved promise if data is not available
+      return newRequest.get(`/users/${userId}`).then((res) => res.data);
     },
-    enabled: !!data, // Fetch user data only when data is available
+    enabled:!!userId
   });
 
-    // Refetch user data when gigData changes
-    useEffect(() => {
-      if (data) {
-        refetchUser();
-      }
-    }, [data, refetchUser]);
   return (
     <div className="gig">
       {isLoading ? (
@@ -131,9 +122,7 @@ function Gig() {
                     </div>
                   </div>
                   <hr />
-                  <p>
-                    {dataUser.desc}
-                  </p>
+                  <p>{dataUser.desc}</p>
                 </div>
               </div>
             )}
