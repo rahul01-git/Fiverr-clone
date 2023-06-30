@@ -20,7 +20,6 @@ function Gig() {
     isLoading: isLoadingUser,
     error: errorUser,
     data: dataUser,
-    refetch: refetchUser,
   } = useQuery({
     queryKey: ["user"],
     queryFn: () => {

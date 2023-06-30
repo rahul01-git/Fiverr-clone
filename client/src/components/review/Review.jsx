@@ -2,7 +2,7 @@ import React from "react";
 import "./Review.scss";
 import { useQuery } from "@tanstack/react-query";
 import newRequest from "../../utils/newRequest";
-const Review = ({ review }) => {
+const Review = ({ review,gigId }) => {
   const { isLoading, error, data } = useQuery({
     queryKey: [review.userId],
     queryFn: () =>
@@ -10,6 +10,11 @@ const Review = ({ review }) => {
         return res.data;
       }),
   });
+
+  const handleDelete = async (id) =>{
+    const {data} =  await newRequest.delete(`/reviews/${id}/${gigId}`)
+    alert(data)
+  }
   return (
     <div className="review">
       {isLoading ? (
@@ -47,6 +52,8 @@ const Review = ({ review }) => {
         <img src="/img/dislike.png" alt="" />
         <span>No</span>
       </div>
+      <button onClick={()=>handleDelete(review._id)}>delete</button>
+      <hr />
     </div>
   );
 };

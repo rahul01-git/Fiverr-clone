@@ -13,7 +13,7 @@ exports.createReview = async (req, res, next) => {
     try {
         const review = await Review.findOne({ gigId: req.body.gigId, userId: req.userId })
 
-        if(review) return next(createError(403, "You have already created a review"))
+        if(review) return next(createError(403, "You have already submitted a review"))
 
         const savedReview = await newReview.save()
         await Gig.findByIdAndUpdate(req.body.gigId,{$inc: {totalStars: req.body.star, starNumber:1}})
@@ -32,8 +32,13 @@ exports.getReviews = async (req, res, next) => {
 }
 exports.deleteReview = async (req, res, next) => {
     try {
-
+      const review = await Review.findByIdAndDelete(req.params.id);
+      await Gig.findByIdAndUpdate(req.params.gigId, {
+        $inc: { totalStars: -review.star, starNumber: -1 }
+      });
+      res.status(200).send('Review deleted successfully.');
     } catch (error) {
-        next(error)
+      next(error);
     }
-}
+  };
+  

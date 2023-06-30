@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Reviews.scss";
 import Review from "../review/Review";
-import { useQuery, useMutation,useQueryClient } from "@tanstack/react-query";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import newRequest from "../../utils/newRequest";
 
 const Reviews = ({ gigId }) => {
-
-  const queryClient = useQueryClient()
+  const queryClient = useQueryClient();
+  const [reviewError, setReviewError] = useState(null);
 
   const { isLoading, error, data } = useQuery({
     queryKey: ["reviews"],
@@ -20,9 +20,16 @@ const Reviews = ({ gigId }) => {
     mutationFn: (review) => {
       return newRequest.post("/reviews", review);
     },
-    onSuccess:()=>{
-      queryClient.invalidateQueries("reviews")
-    }
+    onSuccess: () => {
+      queryClient.invalidateQueries("reviews");
+      setReviewError(null);
+    },
+    onError: (error) => {
+      setReviewError(error.response.data);
+      setTimeout(()=>{
+        setReviewError(null)
+      },3000)
+    },
   });
 
   const handleSubmit = async (e) => {
@@ -30,7 +37,7 @@ const Reviews = ({ gigId }) => {
     const desc = e.target[0].value;
     const star = e.target[1].value;
 
-    mutation.mutate({gigId,desc,star})
+    mutation.mutate({ gigId, desc, star });
   };
   return (
     <div className="reviews">
@@ -39,9 +46,12 @@ const Reviews = ({ gigId }) => {
         ? "loading"
         : error
         ? "something went wrong"
-        : data.map((review) => <Review key={review._id} review={review} />)}
+        : data.map((review) => <Review key={review._id} review={review} gigId={gigId} />)}
       <div className="add">
         <h3>Add a review</h3>
+        {reviewError &&
+          <p className="error">{reviewError}</p>
+          }
         <form onSubmit={handleSubmit} className="addForm">
           <input type="text" placeholder="write  your review" />
           <select name="" id="">

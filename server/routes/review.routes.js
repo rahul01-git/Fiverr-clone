@@ -6,6 +6,6 @@ const {createReview, getReviews,deleteReview} = require('../controllers/review.c
 
 router.post('/',verifyToken,createReview)
 router.get('/:id',getReviews)
-router.delete('/:id',deleteReview)
+router.delete('/:id/:gigId',deleteReview)
 
 module.exports = router
