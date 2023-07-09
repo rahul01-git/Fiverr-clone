@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import newRequest from "../../utils/newRequest";
 import Reviews from "../../components/reviews/Reviews";
+import { useEffect, useId } from "react";
 function Gig() {
   const { id } = useParams();
   const { isLoading, error, data } = useQuery({
@@ -20,7 +21,7 @@ function Gig() {
     error: errorUser,
     data: dataUser,
   } = useQuery({
-    queryKey: ["user"],
+    queryKey: ["user",userId],
     queryFn: () => {
       return newRequest.get(`/users/${userId}`).then((res) => res.data);
     },
