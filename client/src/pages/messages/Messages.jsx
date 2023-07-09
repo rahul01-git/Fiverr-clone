@@ -55,7 +55,7 @@ const Messages = () => {
                   className={
                     ((currentUser.isSeller && !c.readBySeller) ||
                       (!currentUser.isSeller && !c.readByBuyer)) &&
-                    "active"
+                    "active" || ''
                   }
                   key={c.id}
                 >
