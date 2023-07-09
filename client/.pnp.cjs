@@ -38,6 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react-hooks", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:4.6.0"],\
             ["eslint-plugin-react-refresh", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:0.3.5"],\
             ["infinite-react-carousel", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:1.2.11"],\
+            ["moment", "npm:2.29.4"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:18.2.0"],\
             ["react-router-dom", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:6.13.0"],\
@@ -2051,6 +2052,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react-hooks", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:4.6.0"],\
             ["eslint-plugin-react-refresh", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:0.3.5"],\
             ["infinite-react-carousel", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:1.2.11"],\
+            ["moment", "npm:2.29.4"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:18.2.0"],\
             ["react-router-dom", "virtual:37e5a468cb54565e213335eb3fdeac2685cd91ff813dac44d02d987ef92e2958ab0576c64ddd47ea17164360f76dc1ef50109f86c42d31019869ad72b0786165#npm:6.13.0"],\
@@ -3138,6 +3140,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/mkdirp-npm-1.0.4-37f6ef56b9-a96865108c.zip/node_modules/mkdirp/",\
           "packageDependencies": [\
             ["mkdirp", "npm:1.0.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["moment", [\
+        ["npm:2.29.4", {\
+          "packageLocation": "./.yarn/cache/moment-npm-2.29.4-902943305d-0ec3f9c2bc.zip/node_modules/moment/",\
+          "packageDependencies": [\
+            ["moment", "npm:2.29.4"]\
           ],\
           "linkType": "HARD"\
         }]\
