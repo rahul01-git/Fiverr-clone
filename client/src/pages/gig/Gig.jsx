@@ -76,7 +76,7 @@ function Gig() {
               <div className="seller">
                 <h2>About The Seller</h2>
                 <div className="user">
-                  <img src={dataUser.img || "img/user.png"} alt="" />
+                  <img src={dataUser?.img || "img/user.png"} alt="" />
                   <div className="info">
                     <span>{dataUser.username}</span>
                     <div className="stars">

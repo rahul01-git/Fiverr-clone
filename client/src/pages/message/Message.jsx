@@ -48,7 +48,7 @@ const Message = () => {
             {data.map((m) => (
               <div className={m.userId === currentUser._id ? "item owner" : "item"} key={m._id}>
                 <img
-                  src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                  src={m.userId === currentUser._id ? currentUser.img || "/img/heart.png": ''}
                   alt=""
                 />
                 <p>{m.desc}</p>
