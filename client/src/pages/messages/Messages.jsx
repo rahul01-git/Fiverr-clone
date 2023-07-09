@@ -21,8 +21,7 @@ const Messages = () => {
       return newRequest.put(`/conversations/${id}`);
     },
     onSuccess: () => {
-      queryClient.invalidateQueries("reviews");
-      setReviewError(null);
+      queryClient.invalidateQueries("conversations");
     },
 
   });

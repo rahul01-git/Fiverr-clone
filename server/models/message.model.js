@@ -5,7 +5,6 @@ const MessageSchema = new Schema({
     conversationId: {
         type: String,
         required: true,
-        unique: true,
     },
     userId: {
         type: String,

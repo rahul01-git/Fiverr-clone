@@ -1,4 +1,3 @@
-const createError = require('../utils/createError')
 const Message = require('../models/message.model')
 const Conversation = require('../models/conversation.model')
 exports.createMessage = async (req, res, next) => {
