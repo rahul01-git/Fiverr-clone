@@ -18,6 +18,8 @@ import {
   QueryClientProvider,
   useQuery,
 } from "@tanstack/react-query";
+import Pay from "./pages/pay/Pay";
+import Success from "./pages/success/Success";
 
 const App = () => {
   const queryClient = new QueryClient();
@@ -38,6 +40,8 @@ const App = () => {
             <Route path="/message/:id" element={<Message />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/pay/:id" element={<Pay />} />
+            <Route path="/success" element={<Success />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
           <Footer />

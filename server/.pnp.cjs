@@ -35,7 +35,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["express", "npm:4.18.2"],\
             ["jsonwebtoken", "npm:9.0.0"],\
             ["mongoose", "npm:7.3.1"],\
-            ["nodemon", "npm:2.0.22"]\
+            ["nodemon", "npm:2.0.22"],\
+            ["stripe", "npm:12.12.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -115,6 +116,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-20.3.1-86012346c0-63a393ab6d.zip/node_modules/@types/node/",\
           "packageDependencies": [\
             ["@types/node", "npm:20.3.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:20.4.1", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-20.4.1-16fae4d18f-22cbcc792f.zip/node_modules/@types/node/",\
+          "packageDependencies": [\
+            ["@types/node", "npm:20.4.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1969,6 +1977,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["side-channel", "npm:1.0.4"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:6.11.2", {\
+          "packageLocation": "./.yarn/cache/qs-npm-6.11.2-b118bc1c6f-e812f3c590.zip/node_modules/qs/",\
+          "packageDependencies": [\
+            ["qs", "npm:6.11.2"],\
+            ["side-channel", "npm:1.0.4"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["range-parser", [\
@@ -2140,7 +2156,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["express", "npm:4.18.2"],\
             ["jsonwebtoken", "npm:9.0.0"],\
             ["mongoose", "npm:7.3.1"],\
-            ["nodemon", "npm:2.0.22"]\
+            ["nodemon", "npm:2.0.22"],\
+            ["stripe", "npm:12.12.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2336,6 +2353,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["strip-ansi", "npm:7.1.0"],\
             ["ansi-regex", "npm:6.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["stripe", [\
+        ["npm:12.12.0", {\
+          "packageLocation": "./.yarn/cache/stripe-npm-12.12.0-180b3a091b-bfcca52bf0.zip/node_modules/stripe/",\
+          "packageDependencies": [\
+            ["stripe", "npm:12.12.0"],\
+            ["@types/node", "npm:20.4.1"],\
+            ["qs", "npm:6.11.2"]\
           ],\
           "linkType": "HARD"\
         }]\

@@ -1,10 +1,10 @@
 import "./Gig.scss";
 import { Slider } from "infinite-react-carousel/lib";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import newRequest from "../../utils/newRequest";
 import Reviews from "../../components/reviews/Reviews";
-import { useEffect, useId } from "react";
 function Gig() {
   const { id } = useParams();
   const { isLoading, error, data } = useQuery({
@@ -21,7 +21,7 @@ function Gig() {
     error: errorUser,
     data: dataUser,
   } = useQuery({
-    queryKey: ["user",userId],
+    queryKey: ["user", userId],
     queryFn: () => {
       return newRequest.get(`/users/${userId}`).then((res) => res.data);
     },
@@ -56,8 +56,9 @@ function Gig() {
                 <div className="stars">
                   <img src="/img/star.png" alt="" />
                   <span>
-                    {!isNaN(data.totalStars / data.starNumber) &&
-                      Math.round(data.totalStars / data.starNumber) || 0}
+                    {(!isNaN(data.totalStars / data.starNumber) &&
+                      Math.round(data.totalStars / data.starNumber)) ||
+                      0}
                   </span>
                 </div>
               </div>
@@ -81,11 +82,12 @@ function Gig() {
                   <div className="info">
                     <span>{dataUser.username}</span>
                     <div className="stars">
-                    <img src="/img/star.png" alt="" />
-                  <span>
-                    {!isNaN(data.totalStars / data.starNumber) &&
-                      Math.round(data.totalStars / data.starNumber) || 0}
-                  </span>
+                      <img src="/img/star.png" alt="" />
+                      <span>
+                        {(!isNaN(data.totalStars / data.starNumber) &&
+                          Math.round(data.totalStars / data.starNumber)) ||
+                          0}
+                      </span>
                     </div>
                     <button>Contact Me</button>
                   </div>
@@ -144,7 +146,9 @@ function Gig() {
                 </div>
               ))}
             </div>
-            <button>Continue</button>
+            <Link to={`/pay/${id}`}>
+              <button>Continue</button>
+            </Link>
           </div>
         </div>
       )}
